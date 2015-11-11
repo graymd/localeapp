@@ -36,8 +36,7 @@ module Localeapp
     end
 
     def poll!
-      puts (api_call :translations,
-        :url_options => { :query => { :updated_at => updated_at }})
+      puts "this is the api call updated at: #{updated_at}"
       api_call :translations,
         :url_options => { :query => { :updated_at => updated_at }},
         :success => :handle_success,
